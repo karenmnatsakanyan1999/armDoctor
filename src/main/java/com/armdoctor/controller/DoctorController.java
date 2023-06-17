@@ -21,6 +21,7 @@ public class DoctorController {
         DoctorEntity user = doctorService.createUser(doctorDTO);
         return user;
     }
+    // getByUsername
     @GetMapping("/get-by-username")
     public List<DoctorEntity> getByUsername(@RequestParam String email) throws ApiException {
         return doctorService.getByUsername(email);
